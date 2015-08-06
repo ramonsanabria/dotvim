@@ -1,0 +1,60 @@
+snippet readDir "read directory file names"
+//#include <dirent.h>
+std::vector<std::string> getDir(const std::string& dir)
+{
+    DIR *dp;
+    struct dirent *dirp;
+    if((dp = opendir(dir.c_str())) == NULL) {
+	std::cout << "Error: reading direcoty"<< std::endl;
+	exit(EXIT_FAILURE);
+    }
+
+    std::vector<std::string> files;
+    while ((dirp = readdir(dp)) != NULL) {
+	files.push_back(dirp->d_name);
+    }
+    closedir(dp);
+
+    return files;
+} 
+endsnippet
+
+snippet readFile "read int file"
+std::ifstream infile("${1:file.txt}"); //#include <fstream>
+std::string line; //#include <string>
+while (std::getline(infile, line))
+{
+    std::istringstream iss(line);
+    int ${2:var};
+    if (!(iss >> $2)) { break; } // error
+    $0
+}
+endsnippet
+
+snippet writeFile "write to file"
+std::ofstream outfile ("${1:file.txt}"); //#include <fstream>
+if (outfile.is_open()){
+    outfile << "This is a line.\n";
+    outfile.close();
+}
+endsnippet
+
+snippet num2string "transform number to string"
+template <typename T>
+std::string num2string (T num)
+{
+    std::ostringstream ss; //#include <sstream>
+    ss << num;
+    return ss.str();
+}
+endsnippet
+
+snippet string2num "transform string to number"
+template <typename T>
+T string2num (const std::string &text)
+{
+    std::istringstream ss(text); //#include <sstream>
+    T result;
+    return ss >> result ? result : 0;
+}
+endsnippet

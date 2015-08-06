@@ -1,0 +1,29 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[keybindings]
+  next_tab = <Primary><Shift>l
+  close_window = <Primary><Shift>underscore
+  go_up = <Primary><Shift>k
+  move_tab_right = <Primary><Alt>minus
+  prev_tab = <Primary><Shift>h
+  go_down = <Primary><Shift>j
+  close_term = <Primary><Shift>w
+  move_tab_left = <Primary><Alt>minus
+[profiles]
+  [[default]]
+    use_system_font = False
+    background_image = None
+    foreground_color = "#ffffff"
+    scroll_on_output = False
+    font = Liberation Mono for Powerline 11
+    background_color = "#262626"
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]

@@ -1,0 +1,35 @@
+snippet launch "Launch tag" !b
+<launch>
+$0
+</launch>
+endsnippet
+
+snippet include "Include file tag" !b
+<include file="$(find ${1:pkg-name})/${2:name}.launch"/>
+$0
+endsnippet
+
+snippet node "Node tag" !b
+<node pkg="${1}" type="${2}" name="${3}" output="screen"}/>
+$0
+endsnippet
+
+snippet param "Param tag" !b
+<param name="${1}" value="${2}" type="${3:str|int|double|bool}"/>
+$0
+endsnippet
+
+snippet arg "Arg tag" b
+<arg name="${1}" default="${2}"/>
+$0
+endsnippet
+
+snippet rosparam "Rosparam load tag" !b
+<rosparam command="load" file="$(find ${1:pkg-name})/${2:name}.yaml"/>
+$0
+endsnippet
+
+snippet remap "Remap topics" !b
+<remap from="${1:from_topic}" to="${2:to_topic}"/>
+$0
+endsnippet
