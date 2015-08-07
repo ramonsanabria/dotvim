@@ -26,6 +26,11 @@ set history=600                                " increase history size
 set showcmd                                    " show commands
 set title                                      " update title
 
+
+
+set previewheight=1
+
+		
 "toogle between full-screen and split screen"
 nnoremap <leader>x :call QuickfixToggle()<cr>
 let g:quickfix_is_open = 0 
@@ -180,8 +185,8 @@ autocmd FileType c,cpp,objc vnoremap <F2> :ClangFormat<CR>
 Plugin 'vim-scripts/TaskList.vim'
 map <leader>t <Plug>TaskList     
 
-"Enter in normal mode"
-map <S-K> i<CR><Esc>0
+"Enter and stay at the same line"
+map <S-K> a<CR>jkk$
 
 "Show marks
 Plugin 'vim-scripts/ShowMarks'
@@ -227,6 +232,14 @@ map <Leader>c :w<CR>:make -C build/<CR>
 
 "For training"
 inoremap <ESC> <NOP>
+
+"Map for fols the functions"
+noremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
+
 
 "Deactivate spell check when files open
 autocmd BufNew,BufNewFile,BufRead * set nospell
