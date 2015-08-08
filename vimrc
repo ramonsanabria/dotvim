@@ -68,7 +68,12 @@ filetype plugin indent on
 
 "DoxygenToolkit
 Plugin 'mrtazz/DoxygenToolkit.vim'
-let g:DoxygenToolkit_authorName = "Albert Pumarola"
+let g:DoxygenToolkit_authorName = "Ramon Sanabria"
+let g:DoxygenToolkit_commentType = "C++"
+let g:DoxygenToolkit_licenseTag= "\<enter> This code belongs to Human Sensing Lab from Carneigie Mellon University. \<enter> For more information: ftorre@cs.cmu.edu\<enter>"
+map <F3> :Dox<CR>
+map <F4> :DoxAuthor<CR>
+map <F5> :DoxLic<CR>
 
 "CtrlP
 Plugin 'kien/ctrlp.vim'
@@ -158,7 +163,8 @@ map <leader>m :TagbarToggle<CR>
 
 "vim-easymotion
 Plugin 'Lokaltog/vim-easymotion'
-map <leader>f <Plug>(easymotion-w)
+map <leader>F <Plug>(easymotion-sn)
+nmap <leader>f <Plug>(easymotion-bd-w)
 
 "vim multiple cursor
 Plugin 'terryma/vim-multiple-cursors'
