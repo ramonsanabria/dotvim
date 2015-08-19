@@ -138,6 +138,11 @@ Plugin 'vim-scripts/a.vim'
 
 "Nerdcommenter
 Plugin 'scrooloose/nerdcommenter'
+"turn off autocoment"
+:set formatoptions-=cro
+
+"Text objects"
+Plugin 'vim-scripts/argtextobj.vim'
 
 "SuperTab
 Plugin 'ervandew/supertab'
