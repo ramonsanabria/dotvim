@@ -8,7 +8,7 @@ sudo apt-get install vim-gtk
 ```
 #### Clone repo
 ```
-git clone https://github.com/AlbertPumarola/dotvim.git ~/.vim
+git clone https://github.com/ramonsanabria/dotvim.git ~/.vim
 mkdir ~/.vim/bundle
 mkdir ~/.vim/.backup
 mkdir ~/.vim/.swap
