@@ -20,6 +20,13 @@ Open vim and type:
 ```
 :BundleInstall
 ```
+#### Install Conque GDB
+```
+vim ~/.vim/bundle/Conque-GDB/plugin/conque_gdb.vim
+Open conque_gdb.vmb with Vim and run the following commands:
+    :so %
+    :q
+```
 #### Compile YCM
 ```
 cd ~/.vim/bundle/YouCompleteMe/
