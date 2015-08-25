@@ -26,6 +26,11 @@ vim ~/.vim/bundle/Conque-GDB/plugin/conque_gdb.vim
 Open conque_gdb.vmb with Vim and run the following commands:
     :so %
     :q
+    
+```
+#### Install Clang
+```
+sudo apt-get Clang-format
 ```
 #### Compile YCM
 ```
