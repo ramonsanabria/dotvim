@@ -31,6 +31,7 @@ Open conque_gdb.vmb with Vim and run the following commands:
 #### Install Clang
 ```
 sudo apt-get Clang-format
+(last version)
 ```
 #### Compile YCM
 ```
