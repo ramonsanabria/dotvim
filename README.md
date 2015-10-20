@@ -39,6 +39,8 @@ sudo apt-get Clang-format
 ```
 #### Compile YCM
 ```
+sudo apt-get install build-essential cmake
+sudo apt-get install python-dev
 cd ~/.vim/bundle/YouCompleteMe/
 ./install.sh --clang-completer
 ```
