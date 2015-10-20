@@ -63,3 +63,7 @@ Press the install button and close the windows.
 ```
 cp ~/.vim/terminator_config/config ~/.config/terminator/
 ```
+#### Dependencies
+```
+sudo apt-get install ctags
+```
