@@ -2,6 +2,10 @@
 My vim configuration
 
 ## Installation
+#### Letter style for Terminator
+```
+Liberation mono for Powerline
+```
 #### Install vim
 ```
 sudo apt-get install vim-gtk
