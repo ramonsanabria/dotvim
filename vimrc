@@ -26,7 +26,8 @@ set history=600                                " increase history size
 set showcmd                                    " show commands
 set title                                      " update title
 
-
+"do not let mouse select the number of line
+set mouse=a
 
 set previewheight=1
 
@@ -159,6 +160,12 @@ Plugin 'Valloric/YouCompleteMe'
 "Fugitive
 Plugin 'tpope/vim-fugitive'
 
+"Dependence form conque-GDB it helps you to extract files
+Plugin 'Vimball'
+
+"Surround vim
+Plugin 'tpope/vim-surround'
+
 "Tagbar
 Plugin 'majutsushi/tagbar'
 let g:tagbar_compact        = 1
@@ -250,7 +257,11 @@ nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
 
+"set unnamed clipboard. It will allow us to copy paste without register stuff
+set clipboard=unnamed
 
+"cout for debuggger. It prints de line and a comment
+autocmd FileType c,cpp,objc noremap <leader>cl Ostd::cout << "Debug: <C-R>=expand("%:t")<CR> line <C-R>=line('.')<CR>" << std::endl;<esc>
 
 "Deactivate spell check when files open
 autocmd BufNew,BufNewFile,BufRead * set nospell
