@@ -1,0 +1,29 @@
+"General settings
+set relativenumber                             " set relative numbers
+set number                                     " Line numbers
+set autoindent                                 " always set autoindenting on
+set copyindent                                 " copy the previous indentation on autoindenting
+set scrolloff=5                                " scroll before end of file
+set shiftwidth=4                               " 4 spaces when shifting
+set spell spelllang=en_us                      " set english spell check
+set spellfile=~/.vim/spell/techspeak.utf-8.add " set the list path of added words of the spell checking
+set directory=~/.vim/.swap                     " put all swap files in this directory
+set ignorecase                                 " search case insensitive
+set smartcase                                  " use case if any caps used
+set incsearch                                  " incremental search
+set hlsearch                                   " highlight search
+set completeopt-=preview                       " disable preview windows
+set history=600                                " increase history size
+set showcmd                                    " show commands
+set title                                      " update title
+set showcmd                                    " show command in bottom bar
+set showmatch                                  " highlight matching [{()}]
+set clipboard=unnamedplus                      " set unnamed clipboard
+set t_Co=256                                   " 256 colors
+set timeoutlen=500                             " Don't wait so long for the next keypress (particularly in ambigious Leader situations.
+set linebreak 				       " Display long lines wrapped
+set noswapfile				       " No swap files
+let g:autotagExcludeSuffixes="tml.xml.text.txt.vim" "exclude tags
+
+"Deactivate spell check when files open
+autocmd BufNew,BufNewFile,BufRead * set nospell

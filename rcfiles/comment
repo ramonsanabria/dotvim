@@ -1,0 +1,18 @@
+"debug code line
+autocmd FileType c,cpp,objc noremap <leader>cl Ostd::cout << "Debug: <C-R>=expand("%:t")<CR> line <C-R>=line('.')<CR>" << std::endl;<esc>
+autocmd FileType c,cpp,objc noremap <leader>dl :g/std::cout << "Debug: \w\+\.\w\+ line \d\+" << std::endl;/d<cr>
+
+"create title
+nnoremap <leader>ct :call MakeTitle(1)<cr>
+function! MakeTitle(type)
+    if a:type == 1
+	center
+	execute "normal! O//\<esc>78a=\<esc>yyj0i//\<esc>p"
+    elseif a:type == 2
+	execute "normal! yypVr="
+    endif
+endfunction
+
+"turn off autocomment
+au FileType * set fo-=cro
+

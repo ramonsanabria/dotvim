@@ -1,0 +1,8 @@
+"Fugitive
+":Glog -2 load the last ten previous revisions of the current file into the quickfix list
+":Gdiff	  diff between current and last updated file version
+":cprev	  jump to previous quickfix item
+":cnext	  jump to next quickfix item
+":cfirst  jump to first quickfix item
+":clast	  jump to last quickfix item
+Plugin 'tpope/vim-fugitive'

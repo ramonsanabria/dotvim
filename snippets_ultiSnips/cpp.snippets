@@ -14,8 +14,11 @@ $1::$1(${2})
     ${3}
 }
 
-$1::~$1(){}
+$0
+endsnippet
 
+snippet inc "#include"
+#include <${1:iostream}>
 $0
 endsnippet
 
@@ -28,7 +31,7 @@ endsnippet
 
 snippet usage "Main usage"
 if (argc != ${1:1}){
-    std::cout << "Usage ./${2:exe} $3" << std::endl;   
+    std::cout << "Usage ./${2:exe} $3" << std::endl;
     exit(EXIT_FAILURE);
 }
 $0
@@ -38,15 +41,7 @@ snippet class "class .. (class)"
 class ${1:`!p snip.rv = snip.basename or "name"`}
 {
 public:
-    /**
-     * @brief Default constructor.
-     */
     $1(${2});
-
-    /**
-     * @brief Default destructor.
-     */
-    ~$1();
 
 private:
     ${3}
@@ -54,24 +49,14 @@ private:
 endsnippet
 
 snippet getset "member getter and setter"
-/** 
- * @brief $2 setter 
- * 
- * @param value New $2 value to be set
- */
-void ${1:`!p snip.rv = snip.basename or "name"`}::set${2:Variable}(const ${3:T}& value)
+void ${1:`!p snip.rv = snip.basename or "name"`}::set${2:Variable}(const ${3:T}& ${4:value})
 {
-  ${4:$2} = value;
+  $5 = value;
 }
 
-/** 
- * @brief $2 getter
- * 
- * @return $2 value
- */
-$3& $1::get$2() const
+$3 $1::get$2() const
 {
-  return ${4};
+  return ${5};
 }
 endsnippet
 
@@ -82,7 +67,7 @@ struct ${1:name}
 };
 endsnippet
 
-snippet try 
+snippet try
 try {
     ${1}
 }
@@ -130,15 +115,15 @@ for (int ${1:var} = 0; $1 < ${2:count}; ${3:++}$1) {
 $0
 endsnippet
 
-snippet fori "for int loop (fori)"
-for (int i = 0; i < ${2:count}; ${3:++}i) {
+snippet fori "for size_t loop (fori)"
+for (size_t i = 0; i < ${2:count}; ${3:++}i) {
     ${4}
 }
 $0
 endsnippet
 
-snippet forj "for int loop (forj)"
-for (int j = 0; j < ${2:count}; ${3:++}j) {
+snippet forj "for size_t loop (forj)"
+for (size_t j = 0; j < ${2:count}; ${3:++}j) {
     ${4}
 }
 $0
@@ -146,7 +131,7 @@ endsnippet
 
 snippet forp "print loop (forp)"
 //print $1
-for (int p = 0; p < ${1:vec}.size(); ++p) {
+for (size_t p = 0; p < ${1:vec}.size(); ++p) {
     std::cout << $1[p]${2} << std::endl;
 }
 $0
@@ -159,7 +144,7 @@ for(auto ${1:it} = ${2:vec}.begin(); $1 != $2.end(); ++$1) {
 $0
 endsnippet
 
-snippet switch "switch block" 
+snippet switch "switch block"
 switch (${1:state}) {
     case ${2:condition}:
 	${3}
@@ -171,12 +156,11 @@ $0
 endsnippet
 
 snippet ss "std::string"
-std::string $1;
-$0
+std::string $0
 endsnippet
 
 snippet vec "std::vector"
-std::vector< ${1:int} > $0
+std::vector<${1:int}> $0
 endsnippet
 
 snippet list "std::list"
@@ -191,8 +175,24 @@ snippet queue "std::queue"
 std::queue<${1:int}> $0
 endsnippet
 
-snippet map "std::map (m)"
-std::map<${1:key}, ${2:value}> $0 
+snippet umap "std::unordered_map"
+std::unordered_map<${1:key}, ${2:value}> $0
+endsnippet
+
+snippet map "std::map"
+std::map<${1:key}, ${2:value}> $0
+endsnippet
+
+snippet unique "std::unique_ptr"
+std::unique_ptr<${1:int}> $0
+endsnippet
+
+snippet shared "std::shared_ptr"
+std::shared_ptr<${1:int}> $0
+endsnippet
+
+snippet move "std::move"
+std::move(${1}) $0
 endsnippet
 
 snippet s "std::"
@@ -215,7 +215,7 @@ endsnippet
 snippet if "if statement"
 if (${1:condition}){
     ${2}
-}    
+}
 $0
 endsnippet
 
@@ -224,7 +224,7 @@ if (${1:condition}){
     ${2}
 }else{
     ${3}
-} 
+}
 $0
 endsnippet
 
@@ -240,5 +240,5 @@ $0
 endsnippet
 
 snippet temp "template"
-template <typename T>                                                                                                             
+template <typename T>
 endsnippet

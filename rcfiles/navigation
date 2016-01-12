@@ -1,0 +1,23 @@
+" Open definition in a new tab
+noremap <C-]>t :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Open definition in a vertical split
+noremap <C-]>v :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+"Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" quick toggle between two files
+noremap <leader>go <C-^>
+
+" go to tag
+nnoremap <leader>gt <C-]>
+
+" Open definition in a new tab
+noremap <leader>gtt :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Open definition in a vertical split
+noremap <leader>gtv :vsp <CR>:exec("tag ".expand("<cword>"))<CR>

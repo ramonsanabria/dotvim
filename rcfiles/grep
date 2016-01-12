@@ -1,0 +1,6 @@
+" Open the Ag command and place the cursor into the quotes
+nmap <leader>sp :Ag ""<Left>
+nmap <leader>sf :AgFile ""<Left>
+
+"grep the current word using
+nnoremap <leader>sc :Ag <cword><CR>

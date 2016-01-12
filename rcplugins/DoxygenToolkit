@@ -1,0 +1,4 @@
+"DoxygenToolkit
+Plugin 'mrtazz/DoxygenToolkit.vim'
+let g:DoxygenToolkit_authorName = "Albert Pumarola"
+map <F8> :Dox<CR>

@@ -1,0 +1,3 @@
+"TaskList
+Plugin 'vim-scripts/TaskList.vim'
+map <leader>t <Plug>TaskList

@@ -1,0 +1,2 @@
+"Arduino configuration
+au BufRead,BufNewFile *.ino              setfiletype cpp

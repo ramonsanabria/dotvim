@@ -1,0 +1,3 @@
+"Undo
+Plugin 'sjl/gundo.vim'
+map <leader>u :GundoToggle<CR>

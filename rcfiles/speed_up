@@ -1,0 +1,25 @@
+" Quickly select text which I just pasted
+noremap <leader>v `[v`]
+
+"clear all marks
+noremap <leader>dm :delmarks A-Za-z0-9<CR>
+
+" edit vimrc
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+
+" compile
+nnoremap <Leader>c :w\<cr>:make -j4 -C build/<cr>
+"autocmd BufRead,BufNewFile */catkin_ws/* map <Leader>c :w<CR>:!cd ~/catkin_ws/ && catkin_make<CR>
+
+"redraws the screen and removes any search highlighting.
+nnoremap <silent> <F7> :nohl<CR><F7>
+
+" Execute macro in q
+map Q @q
+
+"ESC is not a nice key
+inoremap jk <esc>
+
+" delete to black hole
+vmap <Leader>d "_d
+

@@ -1,0 +1,4 @@
+"vim-easymotion
+Plugin 'Lokaltog/vim-easymotion'
+map <leader>F <Plug>(easymotion-s2)
+map <leader>f <Plug>(easymotion-bd-w)

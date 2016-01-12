@@ -1,0 +1,24 @@
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Wq! wq!
+cnoreabbrev WQ! wq!
+cnoreabbrev Wa! wa!
+cnoreabbrev WA! wa!
+cnoreabbrev Qa! qa!
+cnoreabbrev QA! qa!
+cnoreabbrev Wqa! wqa!
+cnoreabbrev WQa! wqa!
+cnoreabbrev WQA! wqa!
+
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Wq wq
+cnoreabbrev WQ wq
+cnoreabbrev Wa wa
+cnoreabbrev WA wa
+cnoreabbrev Qa qa
+cnoreabbrev QA qa
+
+cnoreabbrev Wqa wqa
+cnoreabbrev WQa wqa
+cnoreabbrev WQA wqa

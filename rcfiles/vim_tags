@@ -1,0 +1,12 @@
+"Tags
+set tags+=~/.vim/tags/tags_opencv "include opencv tags
+set tags+=~/.vim/tags/tags_pcl_1_8 "include pcl-1.8 tags
+if isdirectory("/opt/ros/indigo")
+    set tags+=~/.vim/tags/tags_ros_indigo "include ros indigo tags
+endif
+
+"Include path
+set path=.,include/,../include/
+
+" generate tags
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ~/.vim/tags<CR>

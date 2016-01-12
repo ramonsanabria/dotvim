@@ -1,0 +1,9 @@
+"NERDTree
+Plugin 'scrooloose/nerdtree'
+map  <C-t>     :tabnew<CR>
+map  <S-L>     :tabnext<CR>
+map  <S-H>     :tabprevious<CR>
+map <leader>n  :NERDTreeToggle<CR>
+let NERDTreeMapOpenSplit='x' "horizontal split
+let NERDTreeMapOpenVSplit='v' "vertical split
+

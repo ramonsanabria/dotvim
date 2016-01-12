@@ -1,0 +1,11 @@
+" shows a git diff in the 'gutter' (sign column). It shows whether each line has been added, modified, and where lines have been removed.
+Plugin 'airblade/vim-gitgutter'
+let g:gitgutter_sign_added = '++'
+let g:gitgutter_sign_modified = '~~'
+let g:gitgutter_sign_removed = '--'
+let g:gitgutter_sign_removed_first_line = '^^'
+let g:gitgutter_sign_modified_removed = 'ww'
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+let g:gitgutter_map_keys = 0
+let g:gitgutter_diff_args = '-w'

@@ -1,0 +1,5 @@
+"gdb
+Plugin 'vim-scripts/Conque-GDB'
+command Gdb ConqueGdb
+let g:ConqueGdb_Leader = '\'
+

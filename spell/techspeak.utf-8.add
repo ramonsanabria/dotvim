@@ -7,3 +7,10 @@ ros
 opencv
 pcl
 arduino
+msg
+eigen
+const
+intraface
+param
+msgs
+struct

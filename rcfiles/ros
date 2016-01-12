@@ -1,0 +1,11 @@
+"ROS configuration
+au BufRead,BufNewFile *.urdf              setfiletype xml
+au BufRead,BufNewFile *.launch            setfiletype xml
+au BufRead,BufNewFile *.world             setfilpackagel
+au BufRead,BufNewFile *.launch            UltiSnipsAddFiletypes roslaunch.xml
+au BufRead,BufNewFile cfg/*.cfg           UltiSnipsAddFiletypes roscfg.python
+au BufRead,BufNewFile */*_ws/*package.xml UltiSnipsAddFiletypes rospackage.xml
+au BufRead,BufNewFile */stacks/*.{cpp,h}  UltiSnipsAddFiletypes roscpp.cpp
+au BufRead,BufNewFile */*_ws/*.{cpp,h}    UltiSnipsAddFiletypes roscpp.cpp
+au BufRead,BufNewFile */stacks/*.py       UltiSnipsAddFiletypes rospy.python
+au BufRead,BufNewFile */*_ws/*.py         UltiSnipsAddFiletypes rospy.python

@@ -15,8 +15,8 @@
     background_image = None
     foreground_color = "#ffffff"
     scroll_on_output = False
-    font = Liberation Mono for Powerline 11
-    background_color = "#262626"
+    font = Liberation Mono for Powerline 10
+    background_color = "#000000"
     scrollback_infinite = True
 [layouts]
   [[default]]

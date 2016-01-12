@@ -1,0 +1,50 @@
+"delete white spaces at the end of the line
+function! s:FixWhitespace(line1,line2)
+    let l:save_cursor = getpos(".")
+    silent! execute ':' . a:line1 . ',' . a:line2 . 's/\s\+$//'
+    call setpos('.', l:save_cursor)
+endfunction
+command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
+
+"Fix whitespaces check when files open
+autocmd BufNew,BufNewFile,BufRead * FixWhitespace
+
+" Return to the same line when reopen a file
+" Thanks Amit
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+
+"toggle full screen
+nnoremap <leader>s :call SplitFullScreenToggle()<cr>
+let g:split_is_full_screen = 0
+function! SplitFullScreenToggle()
+    if g:split_is_full_screen
+	execute "normal \<c-w>="
+	let g:split_is_full_screen = 0
+    else
+	execute "normal \<c-w>_\<c-w>\|"
+	let g:split_is_full_screen = 1
+    endif
+endfunction
+
+" obscuretext
+nnoremap <F12> mzggVGg?`z :delmarks z<cr>
+
+" Don't move when *
+nnoremap * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
+
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" As in a terminal
+inoremap <c-a> <esc>I
+inoremap <c-e> <esc>A
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
+

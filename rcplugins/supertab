@@ -1,0 +1,4 @@
+"SuperTab
+Plugin 'ervandew/supertab'
+
+" make YCM compatible with UltiSnips (using supertab)
