@@ -1,7 +1,0 @@
-"a.vim
-Plugin 'vim-scripts/a.vim'
-autocmd FileType c,cpp,h,objc noremap <leader>ga :A <CR>
-autocmd FileType c,cpp,h,objc noremap <leader>gax :AS <CR>
-autocmd FileType c,cpp,h,objc noremap <leader>gav :AV <CR>
-autocmd FileType c,cpp,h,objc noremap <leader>gat :AT <CR>
-
