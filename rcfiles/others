@@ -19,6 +19,11 @@ augroup line_return
         \ endif
 augroup END
 
+
+"activate backspace
+
+set backspace=indent,eol,start
+
 "toggle full screen
 nnoremap <leader>s :call SplitFullScreenToggle()<cr>
 let g:split_is_full_screen = 0
