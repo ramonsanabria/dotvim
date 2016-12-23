@@ -1,4 +1,3 @@
-rm -rf ~/.vim
 rm -rf ~/.viminstall
 mkdir ~/.viminstall
 cd ~/.viminstall
@@ -9,10 +8,10 @@ mkdir vimrun
             --enable-multibyte \
             --enable-rubyinterp=yes \
             --enable-pythoninterp=yes \
-            --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
+            --with-python-config-dir=//home/ajzhang/anaconda2/lib/python2.7/config \
             --enable-python3interp=yes \
-            --with-python3-config-dir=/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu \
-            --enable-perlinterp=yes \
+            --with-python3-config-dir=//home/ajzhang/anaconda2/envs/py35/lib/python3.5/config-3.5m \
+            --enable-perlinterp=no \
             --enable-luainterp=yes \
             --enable-gui=gtk2	\
 	    --enable-cscope \
@@ -24,7 +23,6 @@ echo 'export TERM=xterm-256color' >>$HOME/.bashrc
 
 source $HOME/.bashrc
 
-git clone https://github.com/ramonsanabria/dotvim.git ~/.vim
 
 cd ~/.vim/YouCompleteMe
 git submodule update --init --recursive
